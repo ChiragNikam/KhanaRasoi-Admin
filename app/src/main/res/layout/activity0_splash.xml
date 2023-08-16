@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtView_appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="@string/app_name"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/txtView_deliver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/admin_dashbord"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:textSize="17sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtView_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:text="@string/designer"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:textColor="@color/green"
+        android:textSize="17sp" />
+</LinearLayout>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".Activity3_OrderSummery">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:text="@string/app_name"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_pending_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/pending_orders_icon"
+                app:layout_constraintEnd_toStartOf="@+id/img_completed_orders"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtView_pending_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yeon_sung_regular"
+                android:gravity="center"
+                android:text="Pending \nOrders"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/img_pending_orders"
+                app:layout_constraintStart_toStartOf="@+id/img_pending_orders"
+                app:layout_constraintTop_toBottomOf="@+id/img_pending_orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtView_pending_orders_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yeon_sung_regular"
+                android:gravity="center"
+                android:hint="orders count"
+                android:text="30"
+                android:textColor="@color/red"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtView_pending_orders"
+                app:layout_constraintStart_toStartOf="@+id/txtView_pending_orders"
+                app:layout_constraintTop_toBottomOf="@+id/txtView_pending_orders" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_completed_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/completed_order_icon"
+                app:layout_constraintEnd_toStartOf="@+id/img_all_time_earn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_pending_orders"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtView_completed_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yeon_sung_regular"
+                android:gravity="center"
+                android:text="Completed \nOrders"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/img_completed_orders"
+                app:layout_constraintStart_toStartOf="@+id/img_completed_orders"
+                app:layout_constraintTop_toBottomOf="@+id/img_completed_orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtView_completed_orders_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yeon_sung_regular"
+                android:gravity="center"
+                android:hint="orders count"
+                android:text="10"
+                android:textColor="@color/yellow"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtView_completed_orders"
+                app:layout_constraintHorizontal_bias="0.416"
+                app:layout_constraintStart_toStartOf="@+id/txtView_completed_orders"
+                app:layout_constraintTop_toBottomOf="@+id/txtView_completed_orders"
+                app:layout_constraintVertical_bias="0.538" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_all_time_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/rupee_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_completed_orders"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtView_all_time_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yeon_sung_regular"
+                android:gravity="center"
+                android:text="All Time \nEarning"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/img_all_time_earn"
+                app:layout_constraintStart_toStartOf="@+id/img_all_time_earn"
+                app:layout_constraintTop_toBottomOf="@+id/img_all_time_earn" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtView_all_time_earn_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yeon_sung_regular"
+                android:gravity="center"
+                android:hint="count"
+                android:text="10"
+                android:textColor="@color/green"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtView_all_time_earn"
+                app:layout_constraintHorizontal_bias="0.416"
+                app:layout_constraintStart_toStartOf="@+id/txtView_all_time_earn"
+                app:layout_constraintTop_toBottomOf="@+id/txtView_completed_orders"
+                app:layout_constraintVertical_bias="0.538" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_add_menu"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="59dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView_all_items"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_green_button"
+            android:orientation="vertical">
+            
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/add_menu_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Add Menu"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:fontFamily="@font/yeon_sung_regular"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_all_items"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="59dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView_add_menu"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_green_button"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/all_items_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="All Items"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:fontFamily="@font/yeon_sung_regular"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_profile"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="41dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView_create_new_user"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_add_menu" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_green_button"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/profile_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Profile"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:fontFamily="@font/yeon_sung_regular"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_create_new_user"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="41dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView_profile"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_all_items" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_green_button"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/create_new_user_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Create New\nUser"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:fontFamily="@font/yeon_sung_regular"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_order_dispatch"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="55dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardView_log_out"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_profile" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_green_button"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/order_dispatch_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Order Dispatch"
+                android:textColor="#FF7A00"
+                android:textSize="18sp"
+                android:fontFamily="@font/yeon_sung_regular"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_log_out"
+        android:layout_width="105dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="55dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView_order_dispatch"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_create_new_user" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/light_green_button"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/logout_icon"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Log Out"
+                android:textColor="#FFE85353"
+                android:textSize="18sp"
+                android:fontFamily="@font/yeon_sung_regular"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:text="@string/designer"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

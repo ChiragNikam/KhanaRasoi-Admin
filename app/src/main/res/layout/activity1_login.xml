@@ -11,7 +11,7 @@
         android:id="@+id/image_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="35dp"
         android:contentDescription="app logo"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,7 +125,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_facebook"
-        app:layout_constraintTop_toBottomOf="@+id/txtView_continue_with" />
+        app:layout_constraintTop_toBottomOf="@+id/txtView_continue_with"
+        app:layout_constraintVertical_bias="0.253" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_facebook"
@@ -147,7 +148,7 @@
         android:id="@+id/btn_login"
         android:layout_width="157dp"
         android:layout_height="57dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/green_button"
         android:fontFamily="@font/yeon_sung_regular"
         android:text="@string/login"
@@ -162,10 +163,11 @@
         android:id="@+id/txtView_dont_have_Account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/lato_regular"
         android:text="@string/dont_have_account"
         android:textSize="20sp"
+        android:textColor="@color/green"
         app:layout_constraintBottom_toTopOf="@+id/txtView_have_account"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="@+id/btn_login"

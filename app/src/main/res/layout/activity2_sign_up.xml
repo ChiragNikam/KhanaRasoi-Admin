@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".Activity2_SignUp"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-37dp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtView_appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:text="@string/app_name"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/image_logo"
+        app:layout_constraintStart_toStartOf="@+id/image_logo"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtView_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/signup"
+        android:textColor="@color/green"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtView_appName"
+        app:layout_constraintStart_toStartOf="@+id/txtView_appName"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_appName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtView_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/choose_your_location"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/appCompatAutoCompleteTextView"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_signup" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/appCompatAutoCompleteTextView"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="5dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconDrawable="@drawable/chose_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_signup">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/txtView_choose_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_button"
+            android:fontFamily="@font/lato_regular"
+            android:text="@string/choose_location" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_user_name"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/input_text"
+        android:drawableStart="@drawable/mail"
+        android:drawablePadding="17dp"
+        android:hint="Name of Owner"
+        android:paddingStart="17dp"
+        android:paddingEnd="7dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatAutoCompleteTextView"
+        app:layout_constraintStart_toStartOf="@+id/appCompatAutoCompleteTextView"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatAutoCompleteTextView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_resto_name"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/input_text"
+        android:drawableStart="@drawable/home"
+        android:drawablePadding="17dp"
+        android:hint="Name of Restorent"
+        android:paddingStart="17dp"
+        android:paddingEnd="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_user_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_user_name" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_email_or_phone"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/input_text"
+        android:drawableStart="@drawable/mail"
+        android:drawablePadding="17dp"
+        android:hint="Email or Phone Number"
+        android:paddingStart="17dp"
+        android:paddingEnd="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_resto_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_resto_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_resto_name" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_password"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/input_text"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="17dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="17dp"
+        android:paddingEnd="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_email_or_phone"
+        app:layout_constraintStart_toStartOf="@+id/editText_email_or_phone"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email_or_phone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_create_account"
+        android:layout_width="200dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/green_button"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:text="Create Account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtView_have_account"
+        app:layout_constraintEnd_toEndOf="@+id/editText_password"
+        app:layout_constraintStart_toStartOf="@+id/editText_password"
+        app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtView_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:text="Alredy have an Account"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtView_designer"
+        app:layout_constraintEnd_toEndOf="@+id/btn_create_account"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_create_account"
+        app:layout_constraintTop_toBottomOf="@+id/btn_create_account" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtView_designer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/yeon_sung_regular"
+        android:gravity="center"
+        android:hint="@string/designer"
+        android:text="@string/designer"
+        android:textColor="@color/green"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

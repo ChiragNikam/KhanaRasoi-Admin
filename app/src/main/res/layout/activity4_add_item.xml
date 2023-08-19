@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:orientation="vertical"
+    tools:context=".Activity4_AddItem">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/background_white"
+            android:padding="9dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_button_icon"
+            android:contentDescription="go back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtView_add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeon_sung_regular"
+            android:text="Add Items"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_item_name"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/white_text_view_shape"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:hint="Item Name"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:maxLines="1"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtView_add_item" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_item_price"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/white_text_view_shape"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:hint="Item Price"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_item_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtView_item_image"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/white_text_view_shape"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center_vertical"
+            android:text="Item Image"
+            app:fontFamily="@font/lato_regular"
+            android:hint="Select Image"
+            android:drawableEnd="@drawable/plus_icon"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_item_price" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_item_image"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtView_item_image"
+            app:layout_constraintStart_toStartOf="@+id/txtView_item_image"
+            app:layout_constraintTop_toBottomOf="@id/txtView_item_image" >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgView_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtView_description"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_text_view_shape"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Short Description"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView_item_image" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_description"
+            android:layout_width="0dp"
+            android:layout_height="91dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/white_text_view_shape"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:hint="A short description of your food"
+            app:layout_constraintEnd_toEndOf="@+id/txtView_item_image"
+            app:layout_constraintStart_toStartOf="@+id/txtView_description"
+            app:layout_constraintTop_toBottomOf="@id/txtView_description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtView_ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_text_view_shape"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Ingredients"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/editText_description"
+            app:layout_constraintTop_toBottomOf="@id/editText_description" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_ingredients"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/white_text_view_shape"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:hint="Ingredients you used in your food"
+            app:layout_constraintEnd_toEndOf="@+id/editText_description"
+            app:layout_constraintStart_toStartOf="@+id/txtView_ingredients"
+            app:layout_constraintTop_toBottomOf="@id/txtView_ingredients" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

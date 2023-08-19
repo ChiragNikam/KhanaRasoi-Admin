@@ -18,5 +18,10 @@ class Activity3_OrderSummery : AppCompatActivity() {
             val intent = Intent(this, Activity4_AddItem::class.java)
             startActivity(intent)
         }
+
+        binding.cardViewAllItems.setOnClickListener{
+            val intent = Intent(this, Activity5_AllItems::class.java)
+            startActivity(intent)
+        }
     }
 }

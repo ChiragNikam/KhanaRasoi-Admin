@@ -15,6 +15,14 @@ class Activity4_AddItem : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        // setting toolbar
+        val toolbar = binding.toolbarAddNenu;
+        setSupportActionBar(toolbar);
+        if (supportActionBar != null) {
+            supportActionBar?.setDisplayHomeAsUpEnabled(true);
+            supportActionBar?.setHomeAsUpIndicator(R.drawable.back_button_icon);  // back button on toolbar
+        }
+
         val pickImage = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){uri->
             if(uri != null){
                 binding.imgViewItemImage.setImageURI(uri)
@@ -26,10 +34,6 @@ class Activity4_AddItem : AppCompatActivity() {
 
         binding.txtViewItemImage.setOnClickListener{
             pickImage.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-        }
-
-        binding.btnBack.setOnClickListener{
-            onBackPressed()
         }
     }
 }

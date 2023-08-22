@@ -23,5 +23,10 @@ class Activity3_OrderSummery : AppCompatActivity() {
             val intent = Intent(this, Activity5_AllItems::class.java)
             startActivity(intent)
         }
+
+        binding.imgPendingOrders.setOnClickListener {
+            val intent = Intent(this, Activity6_DeliveryDetails::class.java)
+            startActivity(intent)
+        }
     }
 }

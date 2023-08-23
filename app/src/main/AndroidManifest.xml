@@ -13,9 +13,16 @@
         android:theme="@style/Theme.KhanaRasoiAdmin"
         tools:targetApi="31">
         <activity
+            android:name=".Activity8_PendingOrders"
+            android:exported="false" />
+        <activity
+            android:name=".Activity7_Admin_Profile"
+            android:exported="false"
+            android:parentActivityName=".Activity7_Admin_Profile" />
+        <activity
             android:name=".Activity6_DeliveryDetails"
             android:exported="false"
-            android:parentActivityName=".Activity3_OrderSummery"/>
+            android:parentActivityName=".Activity3_OrderSummery" />
         <activity
             android:name=".Activity5_AllItems"
             android:exported="false"

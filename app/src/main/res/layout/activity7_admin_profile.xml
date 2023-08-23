@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    tools:context=".Activity7_Admin_Profile">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_admin_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_white"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Admin Profile"
+            app:titleMarginStart="40dp"
+            app:titleTextAppearance="@style/toolbar_style"
+            app:titleTextColor="@color/black" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayout_name"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/white_button"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/yeon_sung_regular"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="Name"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:hint="Name"
+            android:textColorHint="@color/white"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayout_address"
+        android:layout_width="0dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_button"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout_name"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout_name"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_name">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/yeon_sung_regular"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="Address"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="top"
+            android:background="@color/white"
+            android:textColorHint="@color/white"
+            android:maxLines="4"
+            android:inputType="textMultiLine"
+            android:paddingStart="5dp"
+            android:hint="address"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayout_phone"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_button"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout_address"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout_address"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_address">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/yeon_sung_regular"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="Phone"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:hint="Phone"
+            android:textColorHint="@color/white"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayout_email"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_button"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout_address"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout_address"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_phone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/yeon_sung_regular"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="E-mail"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:hint="Email"
+            android:textColorHint="@color/white"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayout_email_password"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/white_button"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout_email"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout_email"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_email">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/yeon_sung_regular"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="Password"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:textColorHint="@color/white"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/green_button"
+        android:text="Save Info"
+        android:textAllCaps="false"
+        android:textSize="28sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/yeon_sung_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

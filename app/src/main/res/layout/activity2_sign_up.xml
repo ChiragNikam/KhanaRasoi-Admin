@@ -7,14 +7,14 @@
     android:background="@color/background_white"
     tools:context=".Activity2_SignUp"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-37dp">
+    tools:layout_editor_absoluteY="-19dp">
 
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,7 +36,7 @@
         android:id="@+id/txtView_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/lato_regular"
         android:gravity="center_horizontal"
         android:text="@string/signup"
@@ -50,7 +50,7 @@
         android:id="@+id/txtView_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/lato_regular"
         android:text="@string/choose_your_location"
         android:textColor="@color/green"
@@ -64,7 +64,6 @@
         android:layout_width="380dp"
         android:layout_height="57dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="35dp"
         android:layout_marginEnd="15dp"
         android:elevation="5dp"
         app:boxStrokeWidth="0dp"
@@ -72,7 +71,7 @@
         app:endIconDrawable="@drawable/chose_location"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtView_signup">
+        app:layout_constraintTop_toBottomOf="@+id/txtView_location">
 
         <androidx.appcompat.widget.AppCompatAutoCompleteTextView
             android:id="@+id/txtView_choose_location"
@@ -80,18 +79,21 @@
             android:layout_height="match_parent"
             android:background="@drawable/white_button"
             android:fontFamily="@font/lato_regular"
-            android:text="@string/choose_location" />
+            android:text="@string/choose_location"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="272dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editText_user_name"
         android:layout_width="370dp"
         android:layout_height="48dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/input_text"
         android:drawableStart="@drawable/mail"
         android:drawablePadding="17dp"
         android:hint="Name of Owner"
+        android:inputType="textPersonName"
         android:paddingStart="17dp"
         android:paddingEnd="7dp"
         android:textColor="#000000"
@@ -103,29 +105,33 @@
         android:id="@+id/editText_resto_name"
         android:layout_width="370dp"
         android:layout_height="48dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/input_text"
         android:drawableStart="@drawable/home"
         android:drawablePadding="17dp"
         android:hint="Name of Restorent"
+        android:inputType="text"
         android:paddingStart="17dp"
         android:paddingEnd="7dp"
         app:layout_constraintEnd_toEndOf="@+id/editText_user_name"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editText_user_name"
         app:layout_constraintTop_toBottomOf="@+id/editText_user_name" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/editText_email_or_phone"
+        android:id="@+id/editText_email"
         android:layout_width="370dp"
         android:layout_height="48dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/input_text"
         android:drawableStart="@drawable/mail"
         android:drawablePadding="17dp"
-        android:hint="Email or Phone Number"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:paddingStart="17dp"
         android:paddingEnd="7dp"
         app:layout_constraintEnd_toEndOf="@+id/editText_resto_name"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editText_resto_name"
         app:layout_constraintTop_toBottomOf="@+id/editText_resto_name" />
 
@@ -133,7 +139,7 @@
         android:id="@+id/editText_password"
         android:layout_width="370dp"
         android:layout_height="48dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/input_text"
         android:drawableStart="@drawable/password"
         android:drawablePadding="17dp"
@@ -141,9 +147,10 @@
         android:inputType="textPassword"
         android:paddingStart="17dp"
         android:paddingEnd="7dp"
-        app:layout_constraintEnd_toEndOf="@+id/editText_email_or_phone"
-        app:layout_constraintStart_toStartOf="@+id/editText_email_or_phone"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email_or_phone" />
+        app:layout_constraintEnd_toEndOf="@+id/editText_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_create_account"

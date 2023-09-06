@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "335892024613",
+    "project_id": "khanarasoi",
+    "storage_bucket": "khanarasoi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335892024613:android:96e9a3c682eaaa3c145ecc",
+        "android_client_info": {
+          "package_name": "com.example.khanarasoiadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335892024613-j45r6fu270n6qig6p9eppvilnvis16p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC04YhDYkmCsfb4HF7ve84ZaTwK90SKTBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335892024613-j45r6fu270n6qig6p9eppvilnvis16p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
